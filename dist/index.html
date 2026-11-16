@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="en" class="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="My Portfolio with Linux CachyOS Theme"><meta name="theme-color" content="#0b1116"><meta property="og:title" content="Mary Pauline Calungsod - Full Stack Developer"><meta property="og:description" content="My Portfolio with Linux CachyOS Theme"><meta property="og:type" content="website"><meta property="og:image" content="/avatar.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Mary Pauline Calungsod - Full Stack Developer"><meta name="twitter:description" content="My Portfolio with Linux CachyOS Theme"><meta name="twitter:image" content="/avatar.jpg"><title>Mary Pauline Calungsod - Full Stack Developer</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/index.zsdcvzXQ.css"></head><body><div id="desktop-root"><style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(function(){let e=async e=>{await(await e())()};(self.Astro||(self.Astro={})).load=e,window.dispatchEvent(new Event(`astro:load`))})();</script><script>(function(){function e(t){"@babel/helpers - typeof";return e=typeof Symbol==`function`&&typeof Symbol.iterator==`symbol`?function(e){return typeof e}:function(e){return e&&typeof Symbol==`function`&&e.constructor===Symbol&&e!==Symbol.prototype?`symbol`:typeof e},e(t)}function t(t,n){if(e(t)!=`object`||!t)return t;var r=t[Symbol.toPrimitive];if(r!==void 0){var i=r.call(t,n||`default`);if(e(i)!=`object`)return i;throw TypeError(`@@toPrimitive must return a primitive value.`)}return(n===`string`?String:Number)(t)}function n(n){var r=t(n,`string`);return e(r)==`symbol`?r:r+``}function r(e,t,r){return(t=n(t))in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}let i=/* @__PURE__ */ new Set([`__proto__`,`constructor`,`prototype`]);{let e={0:e=>a(e),1:e=>n(e),2:e=>new RegExp(e),3:e=>new Date(e),4:e=>new Map(n(e)),5:e=>new Set(n(e)),6:e=>BigInt(e),7:e=>new URL(e),8:e=>new Uint8Array(e),9:e=>new Uint16Array(e),10:e=>new Uint32Array(e),11:e=>1/0*e},t=t=>{let[n,r]=t;return n in e?e[n](r):void 0},n=e=>e.map(t),a=e=>typeof e!=`object`||!e?e:Object.fromEntries(Object.entries(e).map(([e,n])=>[e,t(n)]));class o extends HTMLElement{constructor(...e){super(...e),r(this,`Component`,void 0),r(this,`hydrator`,void 0),r(this,`hydrate`,async()=>{var e;if(!this.hydrator||!this.isConnected)return;let t=(e=this.parentElement)==null?void 0:e.closest(`astro-island[ssr]`);if(t){t.addEventListener(`astro:hydrate`,this.hydrate,{once:!0});return}let n=this.querySelectorAll(`astro-slot`),r={},i=this.querySelectorAll(`template[data-astro-template]`);for(let e of i){let t=e.closest(this.tagName);t!=null&&t.isSameNode(this)&&(r[e.getAttribute(`data-astro-template`)||`default`]=e.innerHTML,e.remove())}for(let e of n){let t=e.closest(this.tagName);t!=null&&t.isSameNode(this)&&(r[e.getAttribute(`name`)||`default`]=e.innerHTML)}let o;try{o=this.hasAttribute(`props`)?a(JSON.parse(this.getAttribute(`props`))):{}}catch(e){let t=this.getAttribute(`component-url`)||`<unknown>`,n=this.getAttribute(`component-export`);throw n&&(t+=` (export ${n})`),console.error(`[hydrate] Error parsing props for component ${t}`,this.getAttribute(`props`),e),e}await this.hydrator(this)(this.Component,o,r,{client:this.getAttribute(`client`)}),this.removeAttribute(`ssr`),this.dispatchEvent(new CustomEvent(`astro:hydrate`))}),r(this,`unmount`,()=>{this.isConnected||this.dispatchEvent(new CustomEvent(`astro:unmount`))})}disconnectedCallback(){document.removeEventListener(`astro:after-swap`,this.unmount),document.addEventListener(`astro:after-swap`,this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute(`await-children`)||document.readyState===`interactive`||document.readyState===`complete`)this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener(`DOMContentLoaded`,e),t.disconnect(),this.childrenConnectedCallback()},t=new MutationObserver(()=>{var t;((t=this.lastChild)==null?void 0:t.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue===`astro:end`&&(this.lastChild.remove(),e())});t.observe(this,{childList:!0}),document.addEventListener(`DOMContentLoaded`,e)}}async childrenConnectedCallback(){let e=this.getAttribute(`before-hydration-url`);e&&await import(e),this.start()}getRetryImportUrl(e){let t=new URL(e,document.baseURI);return t.searchParams.set(`astro-retry`,Date.now().toString()),t.toString()}async importWithRetry(e){try{return await import(e)}catch(t){return await new Promise(e=>setTimeout(e,1e3)),import(this.getRetryImportUrl(e))}}handleHydrationError(e){let t=this.getAttribute(`component-url`),n=new CustomEvent(`astro:hydration-error`,{cancelable:!0,bubbles:!0,composed:!0,detail:{error:e,componentUrl:t}});this.dispatchEvent(n)&&console.error(`[astro-island] Error hydrating ${t}`,e)}async start(){let e=JSON.parse(this.getAttribute(`opts`)),t=this.getAttribute(`client`);if(Astro[t]===void 0)window.addEventListener(`astro:${t}`,()=>this.start(),{once:!0});else try{await Astro[t](async()=>{let e=this.getAttribute(`renderer-url`);try{let[t,{default:n}]=await Promise.all([this.importWithRetry(this.getAttribute(`component-url`)),e?this.importWithRetry(e):Promise.resolve({default:()=>()=>{}})]),r=this.getAttribute(`component-export`)||`default`;if(r.includes(`.`)){this.Component=t;for(let e of r.split(`.`)){if(i.has(e)||!this.Component||typeof this.Component!=`object`&&typeof this.Component!=`function`||!Object.hasOwn(this.Component,e))throw Error(`Invalid component export path: ${r}`);this.Component=this.Component[e]}}else{if(i.has(r))throw Error(`Invalid component export path: ${r}`);this.Component=t[r]}return this.hydrator=n,this.hydrate}catch(e){return this.handleHydrationError(e),()=>{}}},e,this)}catch(e){this.handleHydrationError(e)}}attributeChangedCallback(){this.hydrate()}}r(o,`observedAttributes`,[`props`]),customElements.get(`astro-island`)||customElements.define(`astro-island`,o)}})();</script><astro-island uid="Z1itmYI" prefix="r1" component-url="/_astro/DesktopWorkspace.Bu36Ae3E.js" component-export="default" renderer-url="/_astro/client.BxDv6O9t.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;DesktopWorkspace&quot;,&quot;value&quot;:true}" await-children><div class="relative w-screen h-screen overflow-hidden select-none bg-cachy-base"><div class="absolute inset-0 pointer-events-none select-none" style="background-color:#0b1116;background-image:radial-gradient(ellipse 65% 45% at 75% 18%, rgba(0, 212, 170, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 55% 40% at 20% 82%, rgba(14, 165, 233, 0.10) 0%, transparent 60%),
+        linear-gradient(rgba(0, 212, 170, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 212, 170, 0.04) 1px, transparent 1px);background-size:100% 100%, 100% 100%, 48px 48px, 48px 48px;opacity:0"></div><div class="topbar-panel relative flex items-center justify-between px-3 h-8 z-50 no-select"><div class="flex items-center gap-2.5"><button class="relative flex items-center gap-2 text-cachy-teal hover:text-cachy-teal/90 transition-colors" aria-label="My Portfolio" title="Open Profile" tabindex="0"><img src="/avatar.jpg" alt="Mary Pauline Calungsod" class="w-5 h-5 rounded-full object-cover border border-cachy-teal shadow-sm bg-cachy-dark"/><span class="text-xs font-semibold font-mono text-cachy-text">My Portfolio</span></button><div class="w-px h-4 bg-cachy-border/20"></div><button class="flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-cachy-surface/80 border border-cachy-border/25 hover:border-cachy-teal/40 transition-colors text-[11px] font-mono" title="Click to cycle desktop environment (Current: KDE Plasma)" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panels-top-left text-cachy-teal"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg><span class="text-cachy-text font-medium">KDE Plasma</span></button><span class="text-xs font-mono text-cachy-subtext hidden lg:block">x86-64-v4 • BORE • <!-- -->KWin Wayland</span></div><div class="absolute left-1/2 -translate-x-1/2 text-xs font-mono text-cachy-text hidden sm:block">Tue, Nov 17</div><div class="flex items-center gap-2 text-cachy-subtext"><button class="flex items-center gap-1 px-1.5 py-0.5 rounded text-cachy-subtext hover:text-cachy-teal hover:bg-cachy-teal/10 transition-colors" title="Click to cycle wallpaper (Current: CachyOS Default Matrix)" aria-label="Cycle Wallpaper" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette text-cachy-teal"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg><span class="text-[10px] font-mono hidden xl:inline text-cachy-teal/80">Wallpaper</span></button><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wifi hidden sm:block"><path d="M12 20h.01"></path><path d="M2 8.82a15 15 0 0 1 20 0"></path><path d="M5 12.859a10 10 0 0 1 14 0"></path><path d="M8.5 16.429a5 5 0 0 1 7 0"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume2 hidden sm:block"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path><path d="M16 9a5 5 0 0 1 0 6"></path><path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-battery hidden sm:block"><rect width="16" height="10" x="2" y="7" rx="2" ry="2"></rect><line x1="22" x2="22" y1="11" y2="13"></line></svg><div class="w-px h-3 bg-cachy-border/20 hidden sm:block"></div><button class="flex items-center gap-1.5 px-1.5 py-0.5 rounded-full hover:bg-cachy-teal/10 border border-cachy-border/20 transition-colors" title="Open Profile"><img src="/avatar.jpg" alt="Mary Pauline Calungsod" class="w-4 h-4 rounded-full object-cover border border-cachy-teal bg-white"/><span class="text-[11px] font-mono text-cachy-text hidden md:inline">choko</span></button><span class="text-xs font-mono text-cachy-text">12:49:18 AM</span></div></div><div class="absolute inset-0" style="top:32px;bottom:72px;left:0"><div class="absolute top-5 left-5 flex flex-col gap-2.5 z-10 pointer-events-auto"><button class="
+              flex flex-col items-center gap-1.5 p-2 rounded-xl w-24 text-cachy-text
+              transition-all duration-150 group cursor-pointer focus:outline-none select-none
+              hover:bg-cachy-teal/10 border border-transparent
+            " title="Click or double-click to open About Me" tabindex="0" style="opacity:0;transform:translateY(14px)"><span class="text-4xl drop-shadow-md transition-transform group-hover:scale-105">🐧</span><span class="
+                text-[11px] font-medium text-center leading-tight px-1.5 py-0.5 rounded-md
+                max-w-full truncate transition-colors font-mono
+                bg-cachy-base/85 text-cachy-text group-hover:text-cachy-teal
+              ">About Me</span></button><button class="
+              flex flex-col items-center gap-1.5 p-2 rounded-xl w-24 text-cachy-text
+              transition-all duration-150 group cursor-pointer focus:outline-none select-none
+              hover:bg-cachy-teal/10 border border-transparent
+            " title="Click or double-click to open Konsole" tabindex="0" style="opacity:0;transform:translateY(14px)"><span class="text-4xl drop-shadow-md transition-transform group-hover:scale-105">⬛</span><span class="
+                text-[11px] font-medium text-center leading-tight px-1.5 py-0.5 rounded-md
+                max-w-full truncate transition-colors font-mono
+                bg-cachy-base/85 text-cachy-text group-hover:text-cachy-teal
+              ">Konsole</span></button><button class="
+              flex flex-col items-center gap-1.5 p-2 rounded-xl w-24 text-cachy-text
+              transition-all duration-150 group cursor-pointer focus:outline-none select-none
+              hover:bg-cachy-teal/10 border border-transparent
+            " title="Click or double-click to open Projects" tabindex="0" style="opacity:0;transform:translateY(14px)"><span class="text-4xl drop-shadow-md transition-transform group-hover:scale-105">📦</span><span class="
+                text-[11px] font-medium text-center leading-tight px-1.5 py-0.5 rounded-md
+                max-w-full truncate transition-colors font-mono
+                bg-cachy-base/85 text-cachy-text group-hover:text-cachy-teal
+              ">Projects</span></button><button class="
+              flex flex-col items-center gap-1.5 p-2 rounded-xl w-24 text-cachy-text
+              transition-all duration-150 group cursor-pointer focus:outline-none select-none
+              hover:bg-cachy-teal/10 border border-transparent
+            " title="Click or double-click to open Files" tabindex="0" style="opacity:0;transform:translateY(14px)"><span class="text-4xl drop-shadow-md transition-transform group-hover:scale-105">🗂️</span><span class="
+                text-[11px] font-medium text-center leading-tight px-1.5 py-0.5 rounded-md
+                max-w-full truncate transition-colors font-mono
+                bg-cachy-base/85 text-cachy-text group-hover:text-cachy-teal
+              ">Files</span></button><button class="
+              flex flex-col items-center gap-1.5 p-2 rounded-xl w-24 text-cachy-text
+              transition-all duration-150 group cursor-pointer focus:outline-none select-none
+              hover:bg-cachy-teal/10 border border-transparent
+            " title="Click or double-click to open Skills++" tabindex="0" style="opacity:0;transform:translateY(14px)"><span class="text-4xl drop-shadow-md transition-transform group-hover:scale-105">📊</span><span class="
+                text-[11px] font-medium text-center leading-tight px-1.5 py-0.5 rounded-md
+                max-w-full truncate transition-colors font-mono
+                bg-cachy-base/85 text-cachy-text group-hover:text-cachy-teal
+              ">Skills++</span></button><button class="
+              flex flex-col items-center gap-1.5 p-2 rounded-xl w-24 text-cachy-text
+              transition-all duration-150 group cursor-pointer focus:outline-none select-none
+              hover:bg-cachy-teal/10 border border-transparent
+            " title="Click or double-click to open Wallpaper &amp; Theme" tabindex="0" style="opacity:0;transform:translateY(14px)"><span class="text-4xl drop-shadow-md transition-transform group-hover:scale-105">🎨</span><span class="
+                text-[11px] font-medium text-center leading-tight px-1.5 py-0.5 rounded-md
+                max-w-full truncate transition-colors font-mono
+                bg-cachy-base/85 text-cachy-text group-hover:text-cachy-teal
+              ">Wallpaper &amp; Theme</span></button></div></div><div class="
+        absolute bottom-3 left-1/2 -translate-x-1/2 flex justify-center z-40
+      "><div class="
+          flex items-end gap-2 px-4 py-2
+          dock-panel shadow-cachy-lg
+        " style="opacity:0;transform:translateY(24px)"><div class="relative flex flex-col items-center gap-1"><button class="
+          relative w-12 h-12 rounded-xl flex items-center justify-center text-2xl
+          transition-all duration-150 cursor-pointer focus:outline-none
+          glass hover:border-cachy-teal/40 hover:bg-cachy-teal/10
+        " aria-label="About Me" title="About Me" tabindex="0" style="transform:none">🐧</button><div class="
+          absolute pointer-events-none bg-cachy-surface/95 border border-cachy-border/30 rounded-md
+          px-2 py-1 text-[11px] font-mono text-cachy-text whitespace-nowrap shadow-cachy z-50
+          -top-9 left-1/2 -translate-x-1/2
+        " style="opacity:0;transform:scale(0.9)">About Me</div></div><div class="relative flex flex-col items-center gap-1"><button class="
+          relative w-12 h-12 rounded-xl flex items-center justify-center text-2xl
+          transition-all duration-150 cursor-pointer focus:outline-none
+          glass hover:border-cachy-teal/40 hover:bg-cachy-teal/10
+        " aria-label="Konsole" title="Konsole" tabindex="0" style="transform:none">⬛</button><div class="
+          absolute pointer-events-none bg-cachy-surface/95 border border-cachy-border/30 rounded-md
+          px-2 py-1 text-[11px] font-mono text-cachy-text whitespace-nowrap shadow-cachy z-50
+          -top-9 left-1/2 -translate-x-1/2
+        " style="opacity:0;transform:scale(0.9)">Konsole</div></div><div class="relative flex flex-col items-center gap-1"><button class="
+          relative w-12 h-12 rounded-xl flex items-center justify-center text-2xl
+          transition-all duration-150 cursor-pointer focus:outline-none
+          glass hover:border-cachy-teal/40 hover:bg-cachy-teal/10
+        " aria-label="Projects" title="Projects" tabindex="0" style="transform:none">📦</button><div class="
+          absolute pointer-events-none bg-cachy-surface/95 border border-cachy-border/30 rounded-md
+          px-2 py-1 text-[11px] font-mono text-cachy-text whitespace-nowrap shadow-cachy z-50
+          -top-9 left-1/2 -translate-x-1/2
+        " style="opacity:0;transform:scale(0.9)">Projects</div></div><div class="relative flex flex-col items-center gap-1"><button class="
+          relative w-12 h-12 rounded-xl flex items-center justify-center text-2xl
+          transition-all duration-150 cursor-pointer focus:outline-none
+          glass hover:border-cachy-teal/40 hover:bg-cachy-teal/10
+        " aria-label="Files" title="Files" tabindex="0" style="transform:none">🗂️</button><div class="
+          absolute pointer-events-none bg-cachy-surface/95 border border-cachy-border/30 rounded-md
+          px-2 py-1 text-[11px] font-mono text-cachy-text whitespace-nowrap shadow-cachy z-50
+          -top-9 left-1/2 -translate-x-1/2
+        " style="opacity:0;transform:scale(0.9)">Files</div></div><div class="relative flex flex-col items-center gap-1"><button class="
+          relative w-12 h-12 rounded-xl flex items-center justify-center text-2xl
+          transition-all duration-150 cursor-pointer focus:outline-none
+          glass hover:border-cachy-teal/40 hover:bg-cachy-teal/10
+        " aria-label="Skills++" title="Skills++" tabindex="0" style="transform:none">📊</button><div class="
+          absolute pointer-events-none bg-cachy-surface/95 border border-cachy-border/30 rounded-md
+          px-2 py-1 text-[11px] font-mono text-cachy-text whitespace-nowrap shadow-cachy z-50
+          -top-9 left-1/2 -translate-x-1/2
+        " style="opacity:0;transform:scale(0.9)">Skills++</div></div><div class="relative flex flex-col items-center gap-1"><button class="
+          relative w-12 h-12 rounded-xl flex items-center justify-center text-2xl
+          transition-all duration-150 cursor-pointer focus:outline-none
+          glass hover:border-cachy-teal/40 hover:bg-cachy-teal/10
+        " aria-label="Wallpaper &amp; Theme" title="Wallpaper &amp; Theme" tabindex="0" style="transform:none">🎨</button><div class="
+          absolute pointer-events-none bg-cachy-surface/95 border border-cachy-border/30 rounded-md
+          px-2 py-1 text-[11px] font-mono text-cachy-text whitespace-nowrap shadow-cachy z-50
+          -top-9 left-1/2 -translate-x-1/2
+        " style="opacity:0;transform:scale(0.9)">Wallpaper &amp; Theme</div></div></div></div></div><!--astro:end--></astro-island></div></body></html>

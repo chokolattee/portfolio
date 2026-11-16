@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4aa"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="98" fill="#111921" stroke="#00d4aa" stroke-width="3"/>
+  <!-- Decorative grid lines -->
+  <line x1="20" y1="100" x2="180" y2="100" stroke="#00d4aa" stroke-opacity="0.15" stroke-width="1"/>
+  <line x1="100" y1="20" x2="100" y2="180" stroke="#00d4aa" stroke-opacity="0.15" stroke-width="1"/>
+  <!-- Head silhouette -->
+  <circle cx="100" cy="78" r="34" fill="url(#avatarGrad)"/>
+  <!-- Shoulders -->
+  <path d="M 40 165 C 40 128, 70 118, 100 118 C 130 118, 160 128, 160 165 Z" fill="url(#avatarGrad)"/>
+  <!-- Initials overlay -->
+  <text x="100" y="85" text-anchor="middle" fill="#0b1116" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="bold">MP</text>
+</svg>
+

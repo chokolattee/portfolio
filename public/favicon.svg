@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64">
+  <!-- Hexagonal CachyOS emblem -->
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#00d4aa" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00d4aa" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="100" height="100" fill="#0b1116"/>
+  <!-- Glow -->
+  <circle cx="50" cy="50" r="45" fill="url(#glow)"/>
+  <!-- Outer hexagon -->
+  <polygon
+    points="50,8 88,29 88,71 50,92 12,71 12,29"
+    fill="none"
+    stroke="#00d4aa"
+    stroke-width="2.5"
+    opacity="0.7"
+  />
+  <!-- Inner hexagon -->
+  <polygon
+    points="50,20 78,36 78,64 50,80 22,64 22,36"
+    fill="rgba(0,212,170,0.07)"
+    stroke="#00d4aa"
+    stroke-width="1.5"
+    opacity="1"
+  />
+  <!-- C letter -->
+  <text
+    x="50" y="62"
+    text-anchor="middle"
+    fill="#00d4aa"
+    font-size="32"
+    font-weight="bold"
+    font-family="'JetBrains Mono', monospace"
+    opacity="0.95"
+  >C</text>
+</svg>

@@ -1,0 +1,12 @@
+---
+// src/pages/index.astro
+// Entry point — mounts the interactive desktop workspace
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import DesktopWorkspace from '@/components/desktop/DesktopWorkspace';
+import '@/styles/global.css';
+---
+
+<BaseLayout>
+  <DesktopWorkspace client:load />
+</BaseLayout>

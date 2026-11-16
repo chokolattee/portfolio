@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+@import "tailwindcss";
+
+/* ── Design tokens ──────────────────────────────────────────────────────────── */
+:root {
+  --cachy-base: #0b1116;
+  --cachy-surface: #111921;
+  --cachy-overlay: #151f29;
+  --cachy-muted: #1e2d3d;
+  --cachy-teal: #00d4aa;
+  --cachy-cyan: #0ea5e9;
+  --cachy-text: #cdd6f4;
+  --cachy-subtext: #6e7f8d;
+  --cachy-red: #f38ba8;
+  --cachy-yellow: #f9e2af;
+  --cachy-purple: #a78bfa;
+  --cachy-orange: #fab387;
+
+  --window-radius: 12px;
+  --dock-height: 64px;
+  --topbar-height: 32px;
+}
+
+/* ── Reset & base ───────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--cachy-base);
+  color: var(--cachy-text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Desktop wallpaper ──────────────────────────────────────────────────────── */
+#desktop-root {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--cachy-base);
+  background-image:
+    radial-gradient(ellipse 60% 40% at 70% 20%, rgba(0, 212, 170, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 35% at 20% 80%, rgba(14, 165, 233, 0.05) 0%, transparent 55%),
+    linear-gradient(rgba(0, 212, 170, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 170, 0.025) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+}
+
+/* ── Custom scrollbars ──────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 212, 170, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 212, 170, 0.6);
+}
+
+/* ── Terminal ANSI colors ───────────────────────────────────────────────────── */
+.ansi-green {
+  color: #00d4aa;
+}
+
+.ansi-cyan {
+  color: #0ea5e9;
+}
+
+.ansi-red {
+  color: #f38ba8;
+}
+
+.ansi-yellow {
+  color: #f9e2af;
+}
+
+.ansi-purple {
+  color: #a78bfa;
+}
+
+.ansi-bold {
+  font-weight: 700;
+}
+
+/* ── Window chrome ──────────────────────────────────────────────────────────── */
+.kde-window {
+  background: rgba(17, 25, 33, 0.92);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(0, 212, 170, 0.22);
+  border-radius: var(--window-radius);
+  box-shadow:
+    0 0 0 1px rgba(0, 212, 170, 0.12),
+    0 24px 72px rgba(0, 0, 0, 0.75),
+    0 2px 8px rgba(0, 212, 170, 0.08);
+}
+
+.kde-window.active {
+  border-color: rgba(0, 212, 170, 0.45);
+  box-shadow:
+    0 0 0 1px rgba(0, 212, 170, 0.3),
+    0 28px 80px rgba(0, 0, 0, 0.85),
+    0 0 40px rgba(0, 212, 170, 0.08);
+}
+
+.kde-titlebar {
+  background: linear-gradient(180deg,
+      rgba(21, 31, 41, 0.95) 0%,
+      rgba(17, 25, 33, 0.9) 100%);
+  border-bottom: 1px solid rgba(0, 212, 170, 0.15);
+  border-radius: var(--window-radius) var(--window-radius) 0 0;
+}
+
+/* ── KDE window control buttons ─────────────────────────────────────────────── */
+.kde-btn-close {
+  background: #f38ba8;
+}
+
+.kde-btn-minimize {
+  background: #f9e2af;
+}
+
+.kde-btn-maximize {
+  background: #00d4aa;
+}
+
+.kde-btn-close:hover {
+  background: #eb6e8a;
+  filter: brightness(1.2);
+}
+
+.kde-btn-minimize:hover {
+  background: #f0cc7f;
+  filter: brightness(1.2);
+}
+
+.kde-btn-maximize:hover {
+  background: #00b894;
+  filter: brightness(1.2);
+}
+
+/* ── Glassmorphic surface ────────────────────────────────────────────────────── */
+.glass {
+  background: rgba(17, 25, 33, 0.80);
+  backdrop-filter: blur(12px) saturate(160%);
+  border: 1px solid rgba(0, 212, 170, 0.18);
+}
+
+.glass-muted {
+  background: rgba(11, 17, 22, 0.70);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 212, 170, 0.10);
+}
+
+/* ── Progress / gauge bars ──────────────────────────────────────────────────── */
+.gauge-track {
+  background: rgba(0, 212, 170, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  height: 8px;
+}
+
+.gauge-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Dock & TopBar ──────────────────────────────────────────────────────────── */
+.dock-panel {
+  background: rgba(11, 17, 22, 0.88);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(0, 212, 170, 0.20);
+  border-radius: 20px;
+}
+
+.topbar-panel {
+  background: rgba(11, 17, 22, 0.90);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 212, 170, 0.12);
+}
+
+/* ── Selection ──────────────────────────────────────────────────────────────── */
+::selection {
+  background: rgba(0, 212, 170, 0.25);
+  color: #cdd6f4;
+}
+
+/* ── Focus rings ─────────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--cachy-teal);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Mobile shell ────────────────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+
+  html,
+  body {
+    overflow: auto;
+  }
+
+  #desktop-root {
+    height: 100dvh;
+    overflow: hidden;
+  }
+}
+
+/* ── Utility: no-select ─────────────────────────────────────────────────────── */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* ── Blinking cursor ─────────────────────────────────────────────────────────── */
+.cursor-blink {
+  display: inline-block;
+  width: 8px;
+  height: 1.1em;
+  background: var(--cachy-teal);
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
